@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Style sheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Style sheet -->
+
+  <!-- Script file-->
+  <script src="script.js" defer ></script>
+  <!-- Script file -->
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+
+  </style>
+</head>
+<body>
+
+
+  <!-- Main container -->
+  
+  <section class="main-container"  >
+      <!-- Dynamic left side bar -->
+      <div class="left-main-content" >
+        <!-- tab navigator -->
+        <img src="./assets/images/bg-sidebar-desktop.svg" alt="" class="desktop" >
+        <img src="./assets/images/bg-sidebar-mobile.svg" alt="" class="mobile" >
+
+        <div class="tab-content" >
+
+          <div class="tab"  >
+            <!-- Tab button -->
+            <div class="btn-selector active" > <span>1</span> </div>
+            <!-- Tab button -->
+
+            <!-- Tab info -->
+            <div class="tab-info"   >
+              <p class="steps" >STEP 1</p>
+              <p>YOUR INFO</p>
+            </div>
+            <!-- Tab info -->
+
+          </div>
+
+          <div class="tab" aria-labelledby="tab" >
+            <!-- Tab button -->
+            <div class="btn-selector" > <span>2</span> </div>
+            <!-- Tab button -->
+
+            <!-- Tab info -->
+            <div class="tab-info"   >
+              <p class="steps">STEP 2</p>
+              <p>SELECT PLAN</p>
+            </div>
+            <!-- Tab info -->
+
+          </div>
+
+          <div class="tab" aria-labelledby="tab" >
+            <!-- Tab button -->
+            <div class="btn-selector"> <span>3</span> </div>
+            <!-- Tab button -->
+
+            <!-- Tab info -->
+            <div class="tab-info"   >
+              <p class="steps">STEP 3</p>
+              <p>ADD-ONS</p>
+            </div>
+            <!-- Tab info -->
+
+          </div>
+
+          <div class="tab">
+            <!-- Tab button -->
+            <div class="btn-selector" role="navigation"> <span>4</span> </div>
+            <!-- Tab button -->
+
+            <!-- Tab info -->
+            <div class="tab-info"  aria-label="tab4"  >
+              <p class="steps">STEP 4</p>
+              <p>Summary</p>
+            </div>
+            <!-- Tab info -->
+
+          </div>
+        </div>
+        <!-- tab navigator -->
+      </div>
+      <!-- Dynamic left side bar -->
+
+
+
+
+      <!-- Right content -->
+      <section class="right-main-content">
+        <!-- PERSONAL INFO -->
+        <div class="slider-content-tab  active"  >
+          <!-- First page content -->
+          <h2 class="personal" >Personal Info</h2>
+          <p class="details" >Please provide your name, email, address and phone number</p>
+
+          <!-- Form container -->
+          <div class="form-container">
+
+            <!-- form -->
+            <form class="form">
+              <!-- Name info -->
+
+              <div class="name-content info_content">
+
+                <span class="required" >This field is required</span>
+                <label for="name-person">Name</label> <br>
+                <input type="text"  placeholder="eg Stephen King" id="name-person" class="input" >
+                <p class="valid">Enter valid name and must be greater than 5 characters</p>
+
+              </div>
+              <!-- Name info -->
+
+              <!-- Email info -->
+              <div class="email-content info_content">
+
+                <span class="required" >This field is required</span>
+                <label for="email-person" >Email </label><br>
+                <input type="email"  id="email-person" class="input" placeholder="eg. stephenking@lorem.com" >
+                <p class="valid">Enter a valid email</p>
+
+              </div>
+              <!-- Email info -->
+
+              <!-- Number info ⚠️Not validated -->
+              <div class="number-content info_content">
+
+                <span class="required" >This field is required</span>
+                <label for="phone-person">Phone Number</label><br>
+                <input type="number"  placeholder="eg. +1 234 567 899" class="input" id="phone-person" inputmode="numeric" >
+                
+              </div>
+              <!-- Number info ⚠️Not validated -->
+
+            </form>
+            <!-- form -->
+
+          </div>
+          <!-- Form container -->
+
+          <!-- First page content -->
+
+        </div>
+        <!-- PERSONAL INFO -->
+
+
+
+        <!-- Select plan -->
+        <div class="slider-content-tab  second"  >
+          <h2 class="personal" >Select your plan </h2>
+          <p class="details" >You have the option of monthly or yearly billing.</p>
+
+          <!-- Main Card container -->
+          <div class="card-select-container ">
+
+            <!-- Cards -->
+            <div class="cards">
+
+              <!-- First Card -->
+              <div class="card selected">
+
+                <img src="./assets/images/icon-arcade.svg" alt="arcade" aria-hidden="true" >
+
+                <!-- Card text content -->
+                <div class="text-content">
+                  <p class="heroHead">Arcade</p>
+
+                  <div class="sub-text">
+                    <span>$</span>
+                    <p class="digitAmount monthly-amount">9</p><span>/</span>
+                    <p class="digitAmount yearly-amount" style="display: none;" >90</p>
+                    <p class="monthly-amount season"  >mo</p>
+                    <p class="yearly-amount season" style="display: none;" >yr</p>
+                  </div>
+                  
+                  <p class="yearly-amount years" style="display: none;" >2 months free</p>
+                </div>
+                <!-- Card text content -->
+
+                <!-- year displays -->
+
+              </div>
+
+              <!-- Second Card -->
+              <div class="card">
+
+                <img src="./assets/images/icon-advanced.svg" alt="advanced" aria-hidden="true" >
+
+                <!-- Card text content -->
+                <div class="text-content">
+                  <p class="heroHead">Advanced</p>
+
+                  <div class="sub-text">
+                    <span>$</span>
+                    <p class="digitAmount monthly-amount">12</p><span>/</span>
+                    <p class="digitAmount yearly-amount" style="display: none;" >120</p>
+                    <p class="monthly-amount season">mo</p>
+                    <p class="yearly-amount season" style="display: none;" >yr</p>
+                  </div>
+
+                <p class="yearly-amount years" style="display: none;" >2 months free</p>
+                </div>
+                <!-- Card text content -->
+
+              </div>
+
+              <!-- Third Card -->
+              <div class="card">
+
+                <img src="./assets/images/icon-pro.svg" alt="pro" aria-hidden="true" >
+                
+                <!-- Card text content -->
+                <div class="text-content">
+                  <p class="heroHead">Pro</p>
+
+                  <div class="sub-text">
+                    <span>$</span>
+                    <p class="digitAmount monthly-amount">15</p><span>/</span>
+                    <p class="digitAmount yearly-amount" style="display: none;" >150</p>
+                    <p class="monthly-amount season">mo</p>
+                    <p class="yearly-amount season" style="display: none;" >yr</p>
+                  </div>
+
+                <p class="yearly-amount years" >2 months free</p>
+                </div>
+                <!-- Card text content -->
+              </div>
+              <!-- Third Card -->
+
+            </div>
+            <!-- Cards -->
+
+            <!-- Label toggle container -->
+            <div class="toggle-container">
+
+              <p class="leftButton activate" >Monthly</p>
+              <input type="checkbox"  id="toggle">
+              <label for="toggle" class="label" >toggle</label>
+              <p class="rightButton" >Yearly</p>
+
+            </div>
+            <!-- Label toggle container -->
+
+          </div>
+          <!-- Main Card container -->
+
+        </div>
+        <!-- Select plan -->
+
+
+        <!-- Pick add ons  -->
+        <div class="slider-content-tab third"  >
+          <h2 class="personal" >Pick add-ons</h2>
+          <p class="details" >Add-ons help enhance gaming experience</p>
+
+          <!-- Bar toggle container -->
+          <div class="listbar">
+
+            <!-- Individual Bar container => Online Service -->
+            <div class="infoList selected ">
+
+              <div class="content_info">
+                <input type="checkbox"  id="addOns">
+                <div class="detail-info">
+                  <p class="headingP">Online service</p>
+                  <p class="headingSub" >Access to multiplayer games</p>
+                </div>
+              </div>
+
+              <!-- Prices -->
+              <div class="list-amount amount-month "> +$<span class="digitListAmount">1</span><span class="hAmount" >/mo</span> </div>
+              <div class="list-amount amount-year " style="display: none;" > +$<span class="digitListAmount">10</span><span class="hAmount" >/yr</span> </div>
+              <!-- Prices -->
+
+            </div>
+            <!-- Individual Bar container => Online Service -->
+
+            <!-- Individual Bar container => Large Storage -->
+            <div class="infoList">
+
+              <div class="content_info">
+                <input type="checkbox"  id="addOns">
+                <div class="detail-info">
+                  <p class="headingP" >Large storage</p>
+                  <p class="headingSub" >Extra 1TB of cloud save</p>
+                </div>
+              </div>
+
+              <!-- Prices -->
+              <div class="list-amount amount-month "> +$<span class="digitListAmount">2</span><span class="hAmount" >/mo</span> </div>
+              <div class="list-amount amount-year " style="display: none;" > +$<span class="digitListAmount">20</span><span class="hAmount" >/yr</span> </div>
+              <!-- Prices -->
+            </div>
+            <!-- Individual Bar container => Large Storage -->
+
+
+            <!-- Individual Bar container => Customizable Profile -->
+            <div class="infoList">
+
+              <div class="content_info">
+                <input type="checkbox"  id="addOns">
+                <div class="detail-info">
+                  <p class="headingP" >Customizable Profile</p>
+                  <p class="headingSub" >Custom theme on your profile</p>
+                </div>
+              </div>
+
+              <!-- Prices -->
+              <div class="list-amount amount-month"> +$<span class="digitListAmount">2</span><span class="hAmount" >/mo</span> </div>
+              <div class="list-amount amount-year " style="display: none;" > +$<span class="digitListAmount">20</span><span class="hAmount" >/yr</span> </div>
+              <!-- Prices -->
+
+            </div>
+            <!-- Individual Bar container => Customizable Profile -->
+          </div>
+          <!-- Bar toggle container -->
+        </div>
+        <!-- Pick add ons  -->
+
+
+        <!-- Finishing Up -->
+        <div class="slider-content-tab " >
+          <h2 class="personal" >Finishing up</h2>
+          <p class="details" >Double-check everything looks OK before confirming</p>
+
+          <!-- Set Finish -->
+          <div class="setFinish">
+            <!-- SUb container -->
+            <div class="finish-container">
+
+              <!-- Header Notch -->
+              <div class="finish1-contain">
+                <div class="first-link">
+                  <p class="optionSelected" ></p>
+                  <p class="change">Change</p>
+                </div>
+                <div class="amountDisplayed">
+                  <p  class="amountSet" > </p>
+                </div>
+              </div>
+              <!-- Header Notch -->
+  
+              <!-- Second Notch -->
+              <div class="finish2-contain">
+                <div class="second-link"> <!-- Content goes here--> </div>
+                <div class="subAmountDisplay"> <!-- Content goes here--> </div>
+              </div>
+              <!-- Second Notch -->
+            </div>
+            <!-- SUb container -->
+
+            <!-- Total Amount -->
+            <div class="last-finish">
+            <p class="totalSeason" >Total <span>(per month)</span> </p> 
+            <p class="totalAmountAll"> +12/mo </p>
+            </div>
+            <!-- Total Amount -->
+
+          </div>
+        <!-- Finishing Up -->
+
+        </div>
+        <!-- Finishing Up -->
+
+        <!-- Congratulation -->
+        <div class="slider-content-tab bottomContent" >
+
+          <div class="bottomContainer">
+            <!-- Main Congrat container -->
+            <div class="congrat-container">
+              <img src="./assets/images/icon-thank-you.svg" alt="thankyou" aria-hidden="true">
+              <h2>Thank you!</h2>
+              <p >
+                Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com
+              </p>
+            </div>
+            <!-- Main Congrat container -->
+
+          </div>
+        </div>
+        <!-- Congratulation -->
+
+        <!-- Main Buttons -->
+
+        <!-- Main Buttons -->
+
+      </section>
+      <div class="btn-container">
+        <button class="backBtn" >Go back</button>
+        <button class="next mainBtn">Next Step</button>
+      </div>
+      <!-- Right content -->
+  </section>
+
+
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Hudson</a>.
+  </div>
+</body>
+</html>
